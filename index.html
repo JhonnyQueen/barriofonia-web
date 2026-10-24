@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#070913">
+  <meta name="description" content="BarrioFonia Radio: El barrio también se escucha. Música, entretenimiento, cultura, información y expresión comunitaria desde el barrio para todos lados.">
+  <title>BarrioFonia Radio | El barrio también se escucha</title>
+  <style>
+    :root{color-scheme:dark;--cyan:#37e8f7;--pink:#fe527b;--white:#f7f7fb}
+    *{box-sizing:border-box}
+    html{background:#070913;scroll-behavior:smooth}
+    body{margin:0;min-height:100vh;font-family:system-ui,-apple-system,Segoe UI,Arial,sans-serif;color:var(--white);background:#070913;overflow-x:hidden}
+    .bg{position:fixed;inset:0;z-index:0;overflow:hidden;background:#070913}
+    .bg:before{content:"";position:absolute;inset:0;background:url('assets/ciudad-neon.jpg') center center/cover no-repeat}
+    @supports (background-image:url('assets/ciudad-neon.webp')){.bg:before{background-image:url('assets/ciudad-neon.webp')}}
+    .bg:after{content:"";position:absolute;inset:0;background:linear-gradient(180deg,rgba(4,5,17,.20) 0%,rgba(4,5,17,.30) 39%,rgba(4,5,17,.76) 82%,#070913 100%)}
+    .glow{position:fixed;z-index:1;inset:0;pointer-events:none;opacity:.45;background:radial-gradient(ellipse at 15% 57%,rgba(22,220,251,.17),transparent 43%),radial-gradient(ellipse at 86% 45%,rgba(255,28,115,.15),transparent 42%);animation:city-lights 6s ease-in-out infinite alternate}
+    @keyframes city-lights{0%{opacity:.22}100%{opacity:.55}}
+    .page{position:relative;z-index:2;isolation:isolate}
+    .hero{min-height:90svh;display:flex;align-items:center;justify-content:center;flex-direction:column;gap:16px;padding:26px 18px 40px}
+    .logo{display:block;width:min(590px,93vw);max-height:42svh;object-fit:contain;mix-blend-mode:screen;filter:drop-shadow(0 12px 24px rgba(0,0,0,.75))}
+    .tagline{font-weight:800;letter-spacing:.18em;text-align:center;font-size:clamp(12px,1.3vw,17px);color:#f9f9fa;text-shadow:0 2px 16px #000,0 0 12px rgba(0,220,255,.3)}
+    .player-box{width:min(458px,100%);margin-top:5px;padding:18px 16px;background:rgba(7,10,24,.88);border:1px solid rgba(55,232,247,.55);border-radius:18px;box-shadow:0 10px 45px #0008,0 0 22px rgba(55,232,247,.19);backdrop-filter:blur(10px)}
+    .onair{text-align:center;color:var(--pink);font-weight:850;letter-spacing:.17em;font-size:12px;margin-bottom:13px}
+    .caster-placeholder{min-height:90px}
+    .listen-note{font-size:11px;color:#d1dae4;opacity:.85;text-align:center;margin:12px 0 0}
+    .about{padding:45px 18px 78px;background:linear-gradient(180deg,rgba(5,8,22,.88),rgba(4,7,18,.97));border-top:1px solid rgba(52,236,253,.28)}
+    .about-inner{width:min(760px,100%);margin:0 auto}
+    .eyebrow{font-size:12px;letter-spacing:.22em;font-weight:800;color:var(--cyan);text-transform:uppercase;margin-bottom:7px}
+    h1{font-size:clamp(26px,4vw,40px);letter-spacing:-.025em;line-height:1.16;margin:0 0 18px}
+    h1 span{color:var(--cyan)}
+    .about p{font-size:clamp(15px,1.5vw,18px);line-height:1.8;color:#e0e6ef;margin:0 0 18px}
+    .signature{font-weight:800;color:#fff!important;font-size:17px!important}
+    footer{text-align:center;background:#050714;padding:20px;font-size:12px;color:#abb6c7}
+    @media(max-width:600px){.bg:before{background-position:center center}.hero{min-height:96svh;padding:25px 12px 32px;gap:13px}.logo{max-height:35svh;width:min(480px,95vw)}.player-box{padding:15px 12px}.about{padding-top:32px}.tagline{letter-spacing:.11em}}
+    @media(prefers-reduced-motion:reduce){.glow{animation:none;opacity:.28}html{scroll-behavior:auto}}
+  </style>
+</head>
+<body>
+  <div class="bg" aria-hidden="true"></div>
+  <div class="glow" aria-hidden="true"></div>
+  <div class="page">
+    <main>
+      <section class="hero" aria-label="BarrioFonia Radio en vivo">
+        <img class="logo" src="assets/logo-original.jpg" alt="Logo oficial de BarrioFonia Radio">
+        <div class="tagline">EL BARRIO TAMBIÉN SE ESCUCHA</div>
+        <div class="player-box">
+          <div class="onair">● BARRIOFONIA EN VIVO</div>
+          <div class="cstrEmbed caster-placeholder" data-type="newStreamPlayer" data-publicToken="3a2ead95-419a-4fdc-8f5b-217d4b622149" data-theme="dark" data-color="6C2BDD" data-channelId="" data-rendered="false">
+            <a href="https://www.caster.fm">Shoutcast Hosting</a>
+            <a href="https://www.caster.fm">Stream Hosting</a>
+            <a href="https://www.caster.fm">Radio Server Hosting</a>
+          </div>
+          <p class="listen-note">Presiona Play para escuchar nuestra señal.</p>
+        </div>
+      </section>
+      <section class="about" id="acerca-de">
+        <div class="about-inner">
+          <div class="eyebrow">Conócenos</div>
+          <h1>BarrioFonia Radio <span>— El barrio también se escucha.</span></h1>
+          <p>Somos una radio por internet independiente que nace desde el barrio para conectar voces, compartir historias y acompañar a nuestra gente. En BarrioFonia creemos que la comunicación no es exclusiva de los grandes medios: las calles, las comunidades y sus habitantes también tienen mucho que decir.</p>
+          <p>Nuestra propuesta combina música, entretenimiento, cultura, información y expresión comunitaria, con una identidad auténtica, cercana y sin poses. Queremos dar espacio a los sonidos que nos representan, a las historias que merecen contarse y a las voces que pocas veces encuentran un micrófono abierto.</p>
+          <p>Desde el barrio, para todos lados. Porque aquí la radio no solo se escucha: se vive, se comparte y se construye entre todos.</p>
+          <p class="signature">BarrioFonia Radio — ¡El barrio también se escucha!</p>
+        </div>
+      </section>
+    </main>
+    <footer>© BarrioFonia Radio · Desde el barrio, para todos lados.</footer>
+  </div>
+  <script src="https://cdn.cloud.caster.fm/widgets/embed.js" defer></script>
+</body>
+</html>
